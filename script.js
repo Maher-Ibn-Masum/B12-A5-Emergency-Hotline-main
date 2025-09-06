@@ -94,3 +94,18 @@ clearBtn.addEventListener("click",function(){
     
 })
 
+// copy button
+let copies = document.getElementsByClassName("copyBtn");
+
+for(let copy of copies)
+{
+    copy.addEventListener("click",function(){
+        copyCount.innerText = Number(copyCount.innerText) + 1;
+
+          let copyPaste = copy.parentNode.parentNode.childNodes[7].textContent;
+        navigator.clipboard.writeText(copyPaste);
+          alert(`copied Number: ${copyPaste}`);
+          
+    })  
+   
+}
