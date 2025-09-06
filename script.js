@@ -1,4 +1,5 @@
 // heart icon handle
+
 let hearts=  document.getElementsByClassName("heartBtn");
 
 for(let heart of hearts)
@@ -11,6 +12,7 @@ for(let heart of hearts)
 }
 
 //  call button handler
+
  //function for getelementid
  function getElement(id){
     let element = document.getElementById(id);
@@ -29,10 +31,9 @@ for(let call of calls){
 
     let serviceName = call.parentNode.parentNode.childNodes[5].innerText;
     let serviceNumber = call.parentNode.parentNode.childNodes[7].innerText;
-   
 
-        let coin = document.getElementById("coinBtn");
-          if(coin.innerText < 20  )
+    let coin = document.getElementById("coinBtn");
+    if(coin.innerText < 20  )
         {
             alert("You do not have sufficient balance. Keep minimum 20 coins to call.");
             return;
@@ -75,3 +76,21 @@ for(let call of calls){
     })
     
 }
+
+// clear button 
+
+let clearBtn= document.getElementById("clearBtn");
+
+clearBtn.addEventListener("click",function(){
+
+
+   let historyClass = document.getElementsByClassName("history");
+
+   for(let cls of historyClass)
+   {
+        cls.style.display = "none";
+   }
+  
+    
+})
+
